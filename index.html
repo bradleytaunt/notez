@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <title>notez | browser based note taking app</title>
+    <meta name="description" content="Note taking app that uses the browser's local storage to save data.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="onLoad()">
+    <div class="wrapper">
+        <h1 class="heading">notez</h1>
+        <div class="subheading">
+            Browser <code>localStorage</code> note taking app, with the ability to export content as <code>output.txt</code>
+        </div>
+        <details>
+            <summary>Learn More</summary>
+            <p>notez is a small, stupid project built by <a href="https://uglyduck.ca">Bradley Taunt</a> in order to create a minimal note taking "app". Sure, it could be cleaner or even simpler, but it fits basic needs for note-taking. (As if there aren't already enough of these apps, right?)</p>
+            <p>It uses the browser's <code>localStorage</code> to keep you from losing any of your data while you write. Just remember to <strong>save as you work</strong>.</p>
+        </details> 
+        <div class="textarea" id="myTextarea" contenteditable="true"></div>
+        <button id="save-button" onclick="mySave()">Save Changes</button>
+        <button onclick="calldownload()">Export File</button>
+        <footer>
+            <p>Like this project? <a target="_blank" href="https://liberapay.com/uglyduck/">Your support would be greatly appreciated</a> &hearts;</p>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
